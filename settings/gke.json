@@ -1,8 +1,0 @@
-{
-  "order": 20,
-  "title": "GKE",
-  "buttons": [
-    { "label": "kubectl version", "cmd": "kubectl version --short || echo 'kubectl not installed in container yet'" },
-    { "label": "pods (default)", "cmd": "kubectl get pods -o wide || echo 'kubectl not installed in container yet'" }
-  ]
-}

@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  opsdesk:
+    build: .
+    image: opsdesk:dev
+    environment:
+      OPSDESK_ENV: gke
+      TERM: xterm-256color     # nicer colors in the TUI
+      TZ: Asia/Tokyo           # match your local time
+      # DEFAULT_SHELL: /bin/bash  # only if you want to override
+    volumes:
+      - ${HOME}/documents/opsdesk_settings:/app/settings:ro
+      - ${HOME}/.kube:/home/appuser/.kube:ro
+      - ${HOME}/.config/gcloud:/home/appuser/.config/gcloud:ro
+    tty: true
+    stdin_open: true
+    init: true                 # better signal/zombie handling
