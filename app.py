@@ -197,9 +197,9 @@ class MenuPane(Vertical):
 
     def compose(self) -> ComposeResult:
         yield Static(self._title_text(), classes="tab-title")
-        with Horizontal():
-            yield Button("◀ Back", id=f"{self.tab_id}-back")
-            yield Button("⛔ Kill", id=f"{self.tab_id}-kill")
+        with Horizontal(classes="header-actions"):
+            yield Button("◀ Back", id=f"{self.tab_id}-back", classes="header-btn")
+            yield Button("⛔ Kill", id=f"{self.tab_id}-kill", classes="header-btn")
         self._body = ScrollableContainer()
         yield self._body
 
@@ -540,15 +540,17 @@ class OpsDesk(App):
     CSS = """
     Screen { layout: vertical; }
     .body { height: 1fr; }
-    #left { width: 44; border-right: solid $panel; }
-    .tab-title { padding: 1 1; text-style: bold; border-bottom: solid $panel; }
-    Button { margin: 1 1; }
-    #right { layout: vertical; }
-    #out { border: solid $panel; height: 1fr; }
-    #cmd_row { layout: horizontal; }
+    #left { width: 60; min-width: 36; max-width: 96; border-right: solid $panel; }
+    .tab-title { padding: 0 1; text-style: bold; border-bottom: solid $panel; }
+    Button { margin: 0 1; }
+    #left Button { margin: 0 1; padding: 0 1; content-align: left middle; width: 100%; min-height: 1; }
+    .header-actions Button { width: auto; min-width: 10; padding: 0 1; }
+    .header-actions { padding: 0 1; }
+    #out { border: solid $panel; height: 1fr; min-height: 8; }
+    #cmd_row { layout: horizontal; padding: 0 1; }
     #cmd_input { border: solid $panel; width: 1fr; }
     #history_title { padding: 0 1; text-style: italic; color: $text-muted; }
-    #history { border: solid $panel; height: 10; }
+    #history { border: solid $panel; height: 16; min-height: 8; }
     """
 
     BINDINGS = [
@@ -591,8 +593,6 @@ class OpsDesk(App):
                         with TabPane(title="No Tabs"):
                             yield Static("No settings/*.json found.", classes="tab-title")
             with Vertical(id="right"):
-                self.out = Log(id="out")
-                yield self.out
                 with Horizontal(id="cmd_row"):
                     self.cmd_input = Input(placeholder="Type a shell command and press Enter…", id="cmd_input")
                     yield self.cmd_input
@@ -601,6 +601,8 @@ class OpsDesk(App):
                 yield Static("History (click to re-run)", id="history_title")
                 self.history = ScrollableContainer(id="history")
                 yield self.history
+                self.out = Log(id="out")
+                yield self.out
         yield Footer()
 
     def on_mount(self) -> None:
