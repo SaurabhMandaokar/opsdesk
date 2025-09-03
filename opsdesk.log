@@ -1330,3 +1330,394 @@
 2025-09-02 19:06:34,684 - __main__ - DEBUG - Item 2: spdb-team - {'label': 'spdb-team', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml cluster-info'}]}
 2025-09-02 19:06:34,684 - __main__ - DEBUG - Created submenu button: pane-0-submenu-2
 2025-09-02 19:06:34,684 - __main__ - DEBUG - Focusing first button: None
+2025-09-03 08:55:16,008 - __main__ - INFO - Starting OpsDesk application
+2025-09-03 08:55:16,008 - __main__ - INFO - Using settings directory: /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 08:55:16,033 - __main__ - INFO - Initializing OpsDesk app
+2025-09-03 08:55:16,033 - __main__ - INFO - Loading tabs from /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 08:55:16,034 - __main__ - INFO - Found 2 JSON files: ['gke.json', 'on_prem_clusters.json']
+2025-09-03 08:55:16,034 - __main__ - DEBUG - Parsing gke.json
+2025-09-03 08:55:16,034 - __main__ - INFO - Successfully loaded gke.json with 2 items
+2025-09-03 08:55:16,034 - __main__ - DEBUG - Parsing on_prem_clusters.json
+2025-09-03 08:55:16,034 - __main__ - INFO - Successfully loaded on_prem_clusters.json with 3 items
+2025-09-03 08:55:16,034 - __main__ - INFO - Loaded 2 tabs total
+2025-09-03 08:55:16,034 - __main__ - INFO - Loaded 2 tabs
+2025-09-03 08:55:16,034 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-09-03 08:55:16,075 - __main__ - INFO - Composing app layout
+2025-09-03 08:55:16,076 - __main__ - DEBUG - Creating tab 0: On_Prem_clusters (id: pane-0)
+2025-09-03 08:55:16,076 - __main__ - DEBUG - Creating tab 1: GKE (id: pane-1)
+2025-09-03 08:55:16,084 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 08:55:16,085 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 08:55:16,092 - __main__ - INFO - MenuPane mounted for tab pane-0
+2025-09-03 08:55:16,092 - __main__ - INFO - Rendering items for pane-0, stack depth: 1
+2025-09-03 08:55:16,092 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 08:55:16,092 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 08:55:16,092 - __main__ - INFO - Rendering 3 items
+2025-09-03 08:55:16,092 - __main__ - DEBUG - Item 0: alluxio-master - {'label': 'alluxio-master', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml cluster-info'}]}
+2025-09-03 08:55:16,093 - __main__ - DEBUG - Created submenu button: pane-0-submenu-0
+2025-09-03 08:55:16,093 - __main__ - DEBUG - Item 1: spdb-airflow-minio - {'label': 'spdb-airflow-minio', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods '}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'}]}
+2025-09-03 08:55:16,093 - __main__ - DEBUG - Created submenu button: pane-0-submenu-1
+2025-09-03 08:55:16,093 - __main__ - DEBUG - Item 2: spdb-team - {'label': 'spdb-team', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml cluster-info'}]}
+2025-09-03 08:55:16,093 - __main__ - DEBUG - Created submenu button: pane-0-submenu-2
+2025-09-03 08:55:16,094 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 08:55:16,094 - __main__ - INFO - MenuPane mounted for tab pane-1
+2025-09-03 08:55:16,094 - __main__ - INFO - Rendering items for pane-1, stack depth: 1
+2025-09-03 08:55:16,094 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 08:55:16,094 - __main__ - DEBUG - Current items for pane-1: 2 items
+2025-09-03 08:55:16,094 - __main__ - INFO - Rendering 2 items
+2025-09-03 08:55:16,094 - __main__ - DEBUG - Item 0: kubectl version - {'label': 'kubectl version', 'cmd': "kubectl version --short || echo 'kubectl not installed in container yet'"}
+2025-09-03 08:55:16,094 - __main__ - DEBUG - Created action button: kubectl version -> kubectl version --short || echo 'kubectl not installed in container yet'
+2025-09-03 08:55:16,095 - __main__ - DEBUG - Item 1: pods (default) - {'label': 'pods (default)', 'cmd': "kubectl get pods -o wide || echo 'kubectl not installed in container yet'"}
+2025-09-03 08:55:16,095 - __main__ - DEBUG - Created action button: pods (default) -> kubectl get pods -o wide || echo 'kubectl not installed in container yet'
+2025-09-03 08:55:16,095 - __main__ - DEBUG - Focusing first button: None
+2025-09-03 08:55:16,101 - __main__ - INFO - App mounted
+2025-09-03 08:55:16,101 - __main__ - DEBUG - Focusing first button: pane-0-back
+2025-09-03 08:55:16,101 - __main__ - INFO - App initialization complete
+2025-09-03 08:55:18,031 - __main__ - INFO - Button pressed in pane-0: pane-0-submenu-0 (📁 alluxio-master)
+2025-09-03 08:55:18,031 - __main__ - DEBUG - Submenu button pressed: pane-0-submenu-0
+2025-09-03 08:55:18,031 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 08:55:18,031 - __main__ - DEBUG - Submenu index: 0, available items: 3
+2025-09-03 08:55:18,031 - __main__ - INFO - Pushing submenu: alluxio-master
+2025-09-03 08:55:18,031 - __main__ - INFO - Rendering items for pane-0, stack depth: 2
+2025-09-03 08:55:18,032 - __main__ - DEBUG - Title for pane-0: alluxio-master
+2025-09-03 08:55:18,032 - __main__ - DEBUG - Current items for pane-0: 4 items
+2025-09-03 08:55:18,033 - __main__ - INFO - Rendering 4 items
+2025-09-03 08:55:18,033 - __main__ - DEBUG - Item 0: Current context - {'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml config current-context'}
+2025-09-03 08:55:18,033 - __main__ - DEBUG - Created action button: Current context -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml config current-context
+2025-09-03 08:55:18,033 - __main__ - DEBUG - Item 1: Namespaces - {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get ns'}
+2025-09-03 08:55:18,033 - __main__ - DEBUG - Created action button: Namespaces -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get ns
+2025-09-03 08:55:18,033 - __main__ - DEBUG - Item 2: Pods (all) - {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A'}
+2025-09-03 08:55:18,034 - __main__ - DEBUG - Created action button: Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A
+2025-09-03 08:55:18,034 - __main__ - DEBUG - Item 3: Cluster info - {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml cluster-info'}
+2025-09-03 08:55:18,034 - __main__ - DEBUG - Created action button: Cluster info -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml cluster-info
+2025-09-03 08:55:18,034 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 08:55:23,314 - __main__ - INFO - Button pressed in pane-0:  (▶ Pods (all))
+2025-09-03 08:55:23,315 - __main__ - INFO - Action button pressed: ▶ Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A
+2025-09-03 08:55:23,315 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A
+2025-09-03 08:55:23,315 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A'
+2025-09-03 08:55:23,320 - __main__ - DEBUG - Starting command execution
+2025-09-03 08:57:23,786 - __main__ - INFO - Command completed with exit code: 1
+2025-09-03 09:06:10,177 - __main__ - INFO - Starting OpsDesk application
+2025-09-03 09:06:10,177 - __main__ - INFO - Using settings directory: /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 09:06:10,181 - __main__ - INFO - Initializing OpsDesk app
+2025-09-03 09:06:10,181 - __main__ - INFO - Loading tabs from /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 09:06:10,182 - __main__ - INFO - Found 2 JSON files: ['gke.json', 'on_prem_clusters.json']
+2025-09-03 09:06:10,182 - __main__ - DEBUG - Parsing gke.json
+2025-09-03 09:06:10,182 - __main__ - INFO - Successfully loaded gke.json with 2 items
+2025-09-03 09:06:10,182 - __main__ - DEBUG - Parsing on_prem_clusters.json
+2025-09-03 09:06:10,182 - __main__ - INFO - Successfully loaded on_prem_clusters.json with 3 items
+2025-09-03 09:06:10,182 - __main__ - INFO - Loaded 2 tabs total
+2025-09-03 09:06:10,182 - __main__ - INFO - Loaded 2 tabs
+2025-09-03 09:06:10,182 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-09-03 09:06:10,187 - __main__ - INFO - Composing app layout
+2025-09-03 09:06:10,187 - __main__ - DEBUG - Creating tab 0: On_Prem_clusters (id: pane-0)
+2025-09-03 09:06:10,187 - __main__ - DEBUG - Creating tab 1: GKE (id: pane-1)
+2025-09-03 09:06:10,195 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 09:06:10,195 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 09:06:10,200 - __main__ - INFO - MenuPane mounted for tab pane-0
+2025-09-03 09:06:10,200 - __main__ - INFO - Rendering items for pane-0, stack depth: 1
+2025-09-03 09:06:10,200 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 09:06:10,200 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 09:06:10,200 - __main__ - INFO - Rendering 3 items
+2025-09-03 09:06:10,200 - __main__ - DEBUG - Item 0: alluxio-master - {'label': 'alluxio-master', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml cluster-info'}]}
+2025-09-03 09:06:10,200 - __main__ - DEBUG - Created submenu button: pane-0-submenu-0
+2025-09-03 09:06:10,201 - __main__ - DEBUG - Item 1: spdb-airflow-minio - {'label': 'spdb-airflow-minio', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods '}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'}]}
+2025-09-03 09:06:10,201 - __main__ - DEBUG - Created submenu button: pane-0-submenu-1
+2025-09-03 09:06:10,201 - __main__ - DEBUG - Item 2: spdb-team - {'label': 'spdb-team', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml cluster-info'}]}
+2025-09-03 09:06:10,201 - __main__ - DEBUG - Created submenu button: pane-0-submenu-2
+2025-09-03 09:06:10,201 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 09:06:10,201 - __main__ - INFO - MenuPane mounted for tab pane-1
+2025-09-03 09:06:10,201 - __main__ - INFO - Rendering items for pane-1, stack depth: 1
+2025-09-03 09:06:10,201 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 09:06:10,202 - __main__ - DEBUG - Current items for pane-1: 2 items
+2025-09-03 09:06:10,202 - __main__ - INFO - Rendering 2 items
+2025-09-03 09:06:10,202 - __main__ - DEBUG - Item 0: kubectl version - {'label': 'kubectl version', 'cmd': "kubectl version --short || echo 'kubectl not installed in container yet'"}
+2025-09-03 09:06:10,202 - __main__ - DEBUG - Created action button: kubectl version -> kubectl version --short || echo 'kubectl not installed in container yet'
+2025-09-03 09:06:10,202 - __main__ - DEBUG - Item 1: pods (default) - {'label': 'pods (default)', 'cmd': "kubectl get pods -o wide || echo 'kubectl not installed in container yet'"}
+2025-09-03 09:06:10,202 - __main__ - DEBUG - Created action button: pods (default) -> kubectl get pods -o wide || echo 'kubectl not installed in container yet'
+2025-09-03 09:06:10,202 - __main__ - DEBUG - Focusing first button: None
+2025-09-03 09:06:10,207 - __main__ - INFO - App mounted
+2025-09-03 09:06:10,207 - __main__ - DEBUG - Focusing first button: pane-0-back
+2025-09-03 09:06:10,207 - __main__ - INFO - App initialization complete
+2025-09-03 09:06:11,865 - __main__ - INFO - Button pressed in pane-0: pane-0-submenu-1 (📁 spdb-airflow-minio)
+2025-09-03 09:06:11,865 - __main__ - DEBUG - Submenu button pressed: pane-0-submenu-1
+2025-09-03 09:06:11,865 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 09:06:11,865 - __main__ - DEBUG - Submenu index: 1, available items: 3
+2025-09-03 09:06:11,866 - __main__ - INFO - Pushing submenu: spdb-airflow-minio
+2025-09-03 09:06:11,866 - __main__ - INFO - Rendering items for pane-0, stack depth: 2
+2025-09-03 09:06:11,866 - __main__ - DEBUG - Title for pane-0: spdb-airflow-minio
+2025-09-03 09:06:11,866 - __main__ - DEBUG - Current items for pane-0: 4 items
+2025-09-03 09:06:11,866 - __main__ - INFO - Rendering 4 items
+2025-09-03 09:06:11,866 - __main__ - DEBUG - Item 0: Current context - {'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'}
+2025-09-03 09:06:11,866 - __main__ - DEBUG - Created action button: Current context -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context
+2025-09-03 09:06:11,867 - __main__ - DEBUG - Item 1: Namespaces - {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'}
+2025-09-03 09:06:11,867 - __main__ - DEBUG - Created action button: Namespaces -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns
+2025-09-03 09:06:11,867 - __main__ - DEBUG - Item 2: Pods (all) - {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods '}
+2025-09-03 09:06:11,867 - __main__ - DEBUG - Created action button: Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods 
+2025-09-03 09:06:11,867 - __main__ - DEBUG - Item 3: Cluster info - {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'}
+2025-09-03 09:06:11,867 - __main__ - DEBUG - Created action button: Cluster info -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info
+2025-09-03 09:06:11,868 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 09:06:14,034 - __main__ - INFO - Button pressed in pane-0:  (▶ Pods (all))
+2025-09-03 09:06:14,035 - __main__ - INFO - Action button pressed: ▶ Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:06:14,035 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:06:14,035 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods'
+2025-09-03 09:06:14,036 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:06:14,594 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:09:38,941 - __main__ - INFO - Starting OpsDesk application
+2025-09-03 09:09:38,941 - __main__ - INFO - Using settings directory: /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 09:09:38,945 - __main__ - INFO - Initializing OpsDesk app
+2025-09-03 09:09:38,945 - __main__ - INFO - Loading tabs from /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 09:09:38,945 - __main__ - INFO - Found 2 JSON files: ['gke.json', 'on_prem_clusters.json']
+2025-09-03 09:09:38,945 - __main__ - DEBUG - Parsing gke.json
+2025-09-03 09:09:38,945 - __main__ - INFO - Successfully loaded gke.json with 2 items
+2025-09-03 09:09:38,945 - __main__ - DEBUG - Parsing on_prem_clusters.json
+2025-09-03 09:09:38,946 - __main__ - INFO - Successfully loaded on_prem_clusters.json with 3 items
+2025-09-03 09:09:38,946 - __main__ - INFO - Loaded 2 tabs total
+2025-09-03 09:09:38,946 - __main__ - INFO - Loaded 2 tabs
+2025-09-03 09:09:38,946 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-09-03 09:09:38,950 - __main__ - INFO - Composing app layout
+2025-09-03 09:09:38,950 - __main__ - DEBUG - Creating tab 0: On_Prem_clusters (id: pane-0)
+2025-09-03 09:09:38,951 - __main__ - DEBUG - Creating tab 1: GKE (id: pane-1)
+2025-09-03 09:09:38,959 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 09:09:38,960 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 09:09:38,964 - __main__ - INFO - MenuPane mounted for tab pane-0
+2025-09-03 09:09:38,964 - __main__ - INFO - Rendering items for pane-0, stack depth: 1
+2025-09-03 09:09:38,964 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 09:09:38,965 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 09:09:38,965 - __main__ - INFO - Rendering 3 items
+2025-09-03 09:09:38,965 - __main__ - DEBUG - Item 0: alluxio-master - {'label': 'alluxio-master', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml cluster-info'}]}
+2025-09-03 09:09:38,965 - __main__ - DEBUG - Created submenu button: pane-0-submenu-0
+2025-09-03 09:09:38,965 - __main__ - DEBUG - Item 1: spdb-airflow-minio - {'label': 'spdb-airflow-minio', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods '}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'}]}
+2025-09-03 09:09:38,965 - __main__ - DEBUG - Created submenu button: pane-0-submenu-1
+2025-09-03 09:09:38,965 - __main__ - DEBUG - Item 2: spdb-team - {'label': 'spdb-team', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml cluster-info'}]}
+2025-09-03 09:09:38,965 - __main__ - DEBUG - Created submenu button: pane-0-submenu-2
+2025-09-03 09:09:38,966 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 09:09:38,966 - __main__ - INFO - MenuPane mounted for tab pane-1
+2025-09-03 09:09:38,966 - __main__ - INFO - Rendering items for pane-1, stack depth: 1
+2025-09-03 09:09:38,966 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 09:09:38,966 - __main__ - DEBUG - Current items for pane-1: 2 items
+2025-09-03 09:09:38,966 - __main__ - INFO - Rendering 2 items
+2025-09-03 09:09:38,966 - __main__ - DEBUG - Item 0: kubectl version - {'label': 'kubectl version', 'cmd': "kubectl version --short || echo 'kubectl not installed in container yet'"}
+2025-09-03 09:09:38,966 - __main__ - DEBUG - Created action button: kubectl version -> kubectl version --short || echo 'kubectl not installed in container yet'
+2025-09-03 09:09:38,966 - __main__ - DEBUG - Item 1: pods (default) - {'label': 'pods (default)', 'cmd': "kubectl get pods -o wide || echo 'kubectl not installed in container yet'"}
+2025-09-03 09:09:38,966 - __main__ - DEBUG - Created action button: pods (default) -> kubectl get pods -o wide || echo 'kubectl not installed in container yet'
+2025-09-03 09:09:38,967 - __main__ - DEBUG - Focusing first button: None
+2025-09-03 09:09:38,971 - __main__ - INFO - App mounted
+2025-09-03 09:09:38,971 - __main__ - DEBUG - Focusing first button: pane-0-back
+2025-09-03 09:09:38,972 - __main__ - INFO - App initialization complete
+2025-09-03 09:09:41,023 - __main__ - INFO - Button pressed in pane-0: pane-0-submenu-1 (📁 spdb-airflow-minio)
+2025-09-03 09:09:41,024 - __main__ - DEBUG - Submenu button pressed: pane-0-submenu-1
+2025-09-03 09:09:41,025 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 09:09:41,025 - __main__ - DEBUG - Submenu index: 1, available items: 3
+2025-09-03 09:09:41,025 - __main__ - INFO - Pushing submenu: spdb-airflow-minio
+2025-09-03 09:09:41,025 - __main__ - INFO - Rendering items for pane-0, stack depth: 2
+2025-09-03 09:09:41,025 - __main__ - DEBUG - Title for pane-0: spdb-airflow-minio
+2025-09-03 09:09:41,025 - __main__ - DEBUG - Current items for pane-0: 4 items
+2025-09-03 09:09:41,025 - __main__ - INFO - Rendering 4 items
+2025-09-03 09:09:41,025 - __main__ - DEBUG - Item 0: Current context - {'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'}
+2025-09-03 09:09:41,026 - __main__ - DEBUG - Created action button: Current context -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context
+2025-09-03 09:09:41,026 - __main__ - DEBUG - Item 1: Namespaces - {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'}
+2025-09-03 09:09:41,026 - __main__ - DEBUG - Created action button: Namespaces -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns
+2025-09-03 09:09:41,026 - __main__ - DEBUG - Item 2: Pods (all) - {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods '}
+2025-09-03 09:09:41,026 - __main__ - DEBUG - Created action button: Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods 
+2025-09-03 09:09:41,026 - __main__ - DEBUG - Item 3: Cluster info - {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'}
+2025-09-03 09:09:41,027 - __main__ - DEBUG - Created action button: Cluster info -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info
+2025-09-03 09:09:41,027 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 09:09:51,890 - __main__ - INFO - Button pressed in pane-0:  (▶ Pods (all))
+2025-09-03 09:09:51,890 - __main__ - INFO - Action button pressed: ▶ Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:09:51,890 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:09:51,891 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods'
+2025-09-03 09:09:51,892 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:09:52,115 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:09:56,025 - __main__ - INFO - Input submitted: ls
+2025-09-03 09:09:56,025 - __main__ - INFO - Running command: ls
+2025-09-03 09:12:42,898 - __main__ - INFO - Starting OpsDesk application
+2025-09-03 09:12:42,898 - __main__ - INFO - Using settings directory: /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 09:12:42,901 - __main__ - INFO - Initializing OpsDesk app
+2025-09-03 09:12:42,901 - __main__ - INFO - Loading tabs from /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 09:12:42,901 - __main__ - INFO - Found 2 JSON files: ['gke.json', 'on_prem_clusters.json']
+2025-09-03 09:12:42,901 - __main__ - DEBUG - Parsing gke.json
+2025-09-03 09:12:42,901 - __main__ - INFO - Successfully loaded gke.json with 2 items
+2025-09-03 09:12:42,901 - __main__ - DEBUG - Parsing on_prem_clusters.json
+2025-09-03 09:12:42,901 - __main__ - INFO - Successfully loaded on_prem_clusters.json with 3 items
+2025-09-03 09:12:42,901 - __main__ - INFO - Loaded 2 tabs total
+2025-09-03 09:12:42,901 - __main__ - INFO - Loaded 2 tabs
+2025-09-03 09:12:42,901 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-09-03 09:12:42,906 - __main__ - INFO - Composing app layout
+2025-09-03 09:12:42,906 - __main__ - DEBUG - Creating tab 0: On_Prem_clusters (id: pane-0)
+2025-09-03 09:12:42,906 - __main__ - DEBUG - Creating tab 1: GKE (id: pane-1)
+2025-09-03 09:12:42,914 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 09:12:42,915 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 09:12:42,919 - __main__ - INFO - MenuPane mounted for tab pane-0
+2025-09-03 09:12:42,919 - __main__ - INFO - Rendering items for pane-0, stack depth: 1
+2025-09-03 09:12:42,919 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 09:12:42,920 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 09:12:42,920 - __main__ - INFO - Rendering 3 items
+2025-09-03 09:12:42,920 - __main__ - DEBUG - Item 0: alluxio-master - {'label': 'alluxio-master', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml cluster-info'}]}
+2025-09-03 09:12:42,920 - __main__ - DEBUG - Created submenu button: pane-0-submenu-0
+2025-09-03 09:12:42,920 - __main__ - DEBUG - Item 1: spdb-airflow-minio - {'label': 'spdb-airflow-minio', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods '}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'}]}
+2025-09-03 09:12:42,920 - __main__ - DEBUG - Created submenu button: pane-0-submenu-1
+2025-09-03 09:12:42,920 - __main__ - DEBUG - Item 2: spdb-team - {'label': 'spdb-team', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml cluster-info'}]}
+2025-09-03 09:12:42,920 - __main__ - DEBUG - Created submenu button: pane-0-submenu-2
+2025-09-03 09:12:42,921 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 09:12:42,921 - __main__ - INFO - MenuPane mounted for tab pane-1
+2025-09-03 09:12:42,921 - __main__ - INFO - Rendering items for pane-1, stack depth: 1
+2025-09-03 09:12:42,921 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 09:12:42,921 - __main__ - DEBUG - Current items for pane-1: 2 items
+2025-09-03 09:12:42,921 - __main__ - INFO - Rendering 2 items
+2025-09-03 09:12:42,921 - __main__ - DEBUG - Item 0: kubectl version - {'label': 'kubectl version', 'cmd': "kubectl version --short || echo 'kubectl not installed in container yet'"}
+2025-09-03 09:12:42,921 - __main__ - DEBUG - Created action button: kubectl version -> kubectl version --short || echo 'kubectl not installed in container yet'
+2025-09-03 09:12:42,922 - __main__ - DEBUG - Item 1: pods (default) - {'label': 'pods (default)', 'cmd': "kubectl get pods -o wide || echo 'kubectl not installed in container yet'"}
+2025-09-03 09:12:42,922 - __main__ - DEBUG - Created action button: pods (default) -> kubectl get pods -o wide || echo 'kubectl not installed in container yet'
+2025-09-03 09:12:42,922 - __main__ - DEBUG - Focusing first button: None
+2025-09-03 09:12:42,926 - __main__ - INFO - App mounted
+2025-09-03 09:12:42,926 - __main__ - DEBUG - Focusing first button: pane-0-back
+2025-09-03 09:12:42,926 - __main__ - INFO - App initialization complete
+2025-09-03 09:12:49,920 - __main__ - INFO - Input submitted: ls
+2025-09-03 09:12:49,920 - __main__ - INFO - Running command: ls
+2025-09-03 09:12:49,921 - __main__ - DEBUG - Full shell command: /bin/zsh -lc ls
+2025-09-03 09:12:49,923 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:12:50,038 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:13:06,558 - __main__ - INFO - Input submitted: ls
+2025-09-03 09:13:06,559 - __main__ - INFO - Running command: ls
+2025-09-03 09:13:06,559 - __main__ - DEBUG - Full shell command: /bin/zsh -lc ls
+2025-09-03 09:13:06,561 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:13:06,674 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:13:42,625 - __main__ - INFO - Button pressed in pane-0: pane-0-submenu-1 (📁 spdb-airflow-minio)
+2025-09-03 09:13:42,625 - __main__ - DEBUG - Submenu button pressed: pane-0-submenu-1
+2025-09-03 09:13:42,625 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 09:13:42,626 - __main__ - DEBUG - Submenu index: 1, available items: 3
+2025-09-03 09:13:42,626 - __main__ - INFO - Pushing submenu: spdb-airflow-minio
+2025-09-03 09:13:42,626 - __main__ - INFO - Rendering items for pane-0, stack depth: 2
+2025-09-03 09:13:42,626 - __main__ - DEBUG - Title for pane-0: spdb-airflow-minio
+2025-09-03 09:13:42,627 - __main__ - DEBUG - Current items for pane-0: 4 items
+2025-09-03 09:13:42,627 - __main__ - INFO - Rendering 4 items
+2025-09-03 09:13:42,627 - __main__ - DEBUG - Item 0: Current context - {'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'}
+2025-09-03 09:13:42,627 - __main__ - DEBUG - Created action button: Current context -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context
+2025-09-03 09:13:42,627 - __main__ - DEBUG - Item 1: Namespaces - {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'}
+2025-09-03 09:13:42,628 - __main__ - DEBUG - Created action button: Namespaces -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns
+2025-09-03 09:13:42,628 - __main__ - DEBUG - Item 2: Pods (all) - {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods '}
+2025-09-03 09:13:42,628 - __main__ - DEBUG - Created action button: Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods 
+2025-09-03 09:13:42,628 - __main__ - DEBUG - Item 3: Cluster info - {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'}
+2025-09-03 09:13:42,629 - __main__ - DEBUG - Created action button: Cluster info -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info
+2025-09-03 09:13:42,629 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 09:13:44,682 - __main__ - INFO - Button pressed in pane-0:  (▶ Pods (all))
+2025-09-03 09:13:44,682 - __main__ - INFO - Action button pressed: ▶ Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:13:44,682 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:13:44,683 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods'
+2025-09-03 09:13:44,691 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:13:44,950 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:13:50,382 - __main__ - INFO - History command clicked: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:13:50,382 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:13:50,382 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods'
+2025-09-03 09:13:50,387 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:13:50,641 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:14:05,482 - __main__ - INFO - Input submitted: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get-context
+2025-09-03 09:14:05,483 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get-context
+2025-09-03 09:14:05,486 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get-context'
+2025-09-03 09:14:05,489 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:14:05,622 - __main__ - INFO - Command completed with exit code: 1
+2025-09-03 09:14:12,137 - __main__ - INFO - Button pressed in pane-0:  (▶ Pods (all))
+2025-09-03 09:14:12,138 - __main__ - INFO - Action button pressed: ▶ Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:14:12,138 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:14:12,140 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods'
+2025-09-03 09:14:12,142 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:14:12,367 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:15:20,380 - __main__ - INFO - Starting OpsDesk application
+2025-09-03 09:15:20,380 - __main__ - INFO - Using settings directory: /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 09:15:20,383 - __main__ - INFO - Initializing OpsDesk app
+2025-09-03 09:15:20,383 - __main__ - INFO - Loading tabs from /Users/saurabh.mandaokar/documents/opsdesk_settings
+2025-09-03 09:15:20,383 - __main__ - INFO - Found 2 JSON files: ['gke.json', 'on_prem_clusters.json']
+2025-09-03 09:15:20,383 - __main__ - DEBUG - Parsing gke.json
+2025-09-03 09:15:20,383 - __main__ - INFO - Successfully loaded gke.json with 2 items
+2025-09-03 09:15:20,383 - __main__ - DEBUG - Parsing on_prem_clusters.json
+2025-09-03 09:15:20,384 - __main__ - INFO - Successfully loaded on_prem_clusters.json with 3 items
+2025-09-03 09:15:20,384 - __main__ - INFO - Loaded 2 tabs total
+2025-09-03 09:15:20,384 - __main__ - INFO - Loaded 2 tabs
+2025-09-03 09:15:20,384 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-09-03 09:15:20,388 - __main__ - INFO - Composing app layout
+2025-09-03 09:15:20,388 - __main__ - DEBUG - Creating tab 0: On_Prem_clusters (id: pane-0)
+2025-09-03 09:15:20,388 - __main__ - DEBUG - Creating tab 1: GKE (id: pane-1)
+2025-09-03 09:15:20,396 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 09:15:20,397 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 09:15:20,402 - __main__ - INFO - MenuPane mounted for tab pane-0
+2025-09-03 09:15:20,402 - __main__ - INFO - Rendering items for pane-0, stack depth: 1
+2025-09-03 09:15:20,402 - __main__ - DEBUG - Title for pane-0: On_Prem_clusters
+2025-09-03 09:15:20,402 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 09:15:20,402 - __main__ - INFO - Rendering 3 items
+2025-09-03 09:15:20,402 - __main__ - DEBUG - Item 0: alluxio-master - {'label': 'alluxio-master', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/alluxio-master.yaml cluster-info'}]}
+2025-09-03 09:15:20,402 - __main__ - DEBUG - Created submenu button: pane-0-submenu-0
+2025-09-03 09:15:20,402 - __main__ - DEBUG - Item 1: spdb-airflow-minio - {'label': 'spdb-airflow-minio', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods '}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'}]}
+2025-09-03 09:15:20,402 - __main__ - DEBUG - Created submenu button: pane-0-submenu-1
+2025-09-03 09:15:20,402 - __main__ - DEBUG - Item 2: spdb-team - {'label': 'spdb-team', 'items': [{'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml config current-context'}, {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get ns'}, {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml get pods -A'}, {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-team.yaml cluster-info'}]}
+2025-09-03 09:15:20,402 - __main__ - DEBUG - Created submenu button: pane-0-submenu-2
+2025-09-03 09:15:20,403 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 09:15:20,403 - __main__ - INFO - MenuPane mounted for tab pane-1
+2025-09-03 09:15:20,403 - __main__ - INFO - Rendering items for pane-1, stack depth: 1
+2025-09-03 09:15:20,403 - __main__ - DEBUG - Title for pane-1: GKE
+2025-09-03 09:15:20,403 - __main__ - DEBUG - Current items for pane-1: 2 items
+2025-09-03 09:15:20,403 - __main__ - INFO - Rendering 2 items
+2025-09-03 09:15:20,403 - __main__ - DEBUG - Item 0: kubectl version - {'label': 'kubectl version', 'cmd': "kubectl version --short || echo 'kubectl not installed in container yet'"}
+2025-09-03 09:15:20,403 - __main__ - DEBUG - Created action button: kubectl version -> kubectl version --short || echo 'kubectl not installed in container yet'
+2025-09-03 09:15:20,403 - __main__ - DEBUG - Item 1: pods (default) - {'label': 'pods (default)', 'cmd': "kubectl get pods -o wide || echo 'kubectl not installed in container yet'"}
+2025-09-03 09:15:20,403 - __main__ - DEBUG - Created action button: pods (default) -> kubectl get pods -o wide || echo 'kubectl not installed in container yet'
+2025-09-03 09:15:20,404 - __main__ - DEBUG - Focusing first button: None
+2025-09-03 09:15:20,408 - __main__ - INFO - App mounted
+2025-09-03 09:15:20,408 - __main__ - DEBUG - Focusing first button: pane-0-back
+2025-09-03 09:15:20,408 - __main__ - INFO - App initialization complete
+2025-09-03 09:15:26,027 - __main__ - INFO - Input submitted: ls
+2025-09-03 09:15:26,028 - __main__ - INFO - Running command: ls
+2025-09-03 09:15:26,029 - __main__ - DEBUG - Full shell command: /bin/zsh -lc ls
+2025-09-03 09:15:26,032 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:15:26,132 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:15:27,497 - __main__ - INFO - Button pressed in pane-0: pane-0-submenu-1 (📁 spdb-airflow-minio)
+2025-09-03 09:15:27,497 - __main__ - DEBUG - Submenu button pressed: pane-0-submenu-1
+2025-09-03 09:15:27,497 - __main__ - DEBUG - Current items for pane-0: 3 items
+2025-09-03 09:15:27,497 - __main__ - DEBUG - Submenu index: 1, available items: 3
+2025-09-03 09:15:27,497 - __main__ - INFO - Pushing submenu: spdb-airflow-minio
+2025-09-03 09:15:27,497 - __main__ - INFO - Rendering items for pane-0, stack depth: 2
+2025-09-03 09:15:27,497 - __main__ - DEBUG - Title for pane-0: spdb-airflow-minio
+2025-09-03 09:15:27,498 - __main__ - DEBUG - Current items for pane-0: 4 items
+2025-09-03 09:15:27,498 - __main__ - INFO - Rendering 4 items
+2025-09-03 09:15:27,498 - __main__ - DEBUG - Item 0: Current context - {'label': 'Current context', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'}
+2025-09-03 09:15:27,498 - __main__ - DEBUG - Created action button: Current context -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context
+2025-09-03 09:15:27,498 - __main__ - DEBUG - Item 1: Namespaces - {'label': 'Namespaces', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'}
+2025-09-03 09:15:27,498 - __main__ - DEBUG - Created action button: Namespaces -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns
+2025-09-03 09:15:27,499 - __main__ - DEBUG - Item 2: Pods (all) - {'label': 'Pods (all)', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods '}
+2025-09-03 09:15:27,499 - __main__ - DEBUG - Created action button: Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods 
+2025-09-03 09:15:27,499 - __main__ - DEBUG - Item 3: Cluster info - {'label': 'Cluster info', 'cmd': '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'}
+2025-09-03 09:15:27,499 - __main__ - DEBUG - Created action button: Cluster info -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info
+2025-09-03 09:15:27,500 - __main__ - DEBUG - Focusing first button: pane-0-submenu-0
+2025-09-03 09:15:28,913 - __main__ - INFO - Button pressed in pane-0:  (▶ Pods (all))
+2025-09-03 09:15:28,914 - __main__ - INFO - Action button pressed: ▶ Pods (all) -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:15:28,914 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods
+2025-09-03 09:15:28,914 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get pods'
+2025-09-03 09:15:28,920 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:15:29,163 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:15:39,348 - __main__ - INFO - Button pressed in pane-0:  (▶ Cluster info)
+2025-09-03 09:15:39,349 - __main__ - INFO - Action button pressed: ▶ Cluster info -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info
+2025-09-03 09:15:39,349 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info
+2025-09-03 09:15:39,349 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml cluster-info'
+2025-09-03 09:15:39,351 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:15:39,519 - __main__ - INFO - Command completed with exit code: 1
+2025-09-03 09:15:41,562 - __main__ - INFO - Button pressed in pane-0:  (▶ Namespaces)
+2025-09-03 09:15:41,562 - __main__ - INFO - Action button pressed: ▶ Namespaces -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns
+2025-09-03 09:15:41,562 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns
+2025-09-03 09:15:41,564 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml get ns'
+2025-09-03 09:15:41,566 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:15:41,761 - __main__ - INFO - Command completed with exit code: 1
+2025-09-03 09:15:42,411 - __main__ - INFO - Button pressed in pane-0:  (▶ Current context)
+2025-09-03 09:15:42,411 - __main__ - INFO - Action button pressed: ▶ Current context -> /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context
+2025-09-03 09:15:42,411 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context
+2025-09-03 09:15:42,413 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'
+2025-09-03 09:15:42,414 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:15:42,547 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:15:51,133 - __main__ - INFO - Input submitted: ls
+2025-09-03 09:15:51,133 - __main__ - INFO - Running command: ls
+2025-09-03 09:15:51,138 - __main__ - DEBUG - Full shell command: /bin/zsh -lc ls
+2025-09-03 09:15:51,141 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:15:51,255 - __main__ - INFO - Command completed with exit code: 0
+2025-09-03 09:16:18,038 - __main__ - INFO - History command clicked: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context
+2025-09-03 09:16:18,038 - __main__ - INFO - Running command: /opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context
+2025-09-03 09:16:18,040 - __main__ - DEBUG - Full shell command: /bin/zsh -lc '/opt/homebrew/bin/kubectl --kubeconfig=/Users/saurabh.mandaokar/documents/kubeconfigfiles/spdb-airflow-minio.yaml config current-context'
+2025-09-03 09:16:18,049 - __main__ - DEBUG - Starting command execution
+2025-09-03 09:16:18,162 - __main__ - INFO - Command completed with exit code: 0

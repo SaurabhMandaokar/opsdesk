@@ -1,0 +1,6 @@
+{
+"on prem clusters": {
+"kubectl_path": "/opt/homebrew/bin/kubectl",
+"kubeconfig_dir": "/Users/saurabh.mandaokar/Documents/kubeconfigfiles"
+}
+}
