@@ -17,6 +17,7 @@ from textual.widgets import Button, Static, Footer, Header, TabbedContent, TabPa
 
 # Small helpers
 from dsl import dynamic_from_lines, run_and_capture
+from providers_k8s import build_items_for_kubeconfig
 from config import load_config
 
 # Set up logging
@@ -334,11 +335,10 @@ class MenuPane(Vertical):
                 "items": [{"label": "Info", "cmd": 'echo "No kubeconfig files found"'}],
             }
 
-        env_var = str(picker.get("env_var", "KUBECONFIG"))
         # Use global kubectl path from top-level config (no per-tab override)
         kubectl_q = shlex.quote(KUBECTL)
         actions = item.get("actions", [])  # template actions for each file
-        logger.debug(f"Using env_var: {env_var}, actions: {len(actions)}")
+        logger.debug(f"Using kubectl path: {KUBECTL}, actions: {len(actions)}")
 
         # Build a per-file submenu entry that shows the actions
         choices: List[Dict[str, Any]] = []
@@ -348,69 +348,8 @@ class MenuPane(Vertical):
             path_str = str(p.resolve())
             logger.debug(f"Processing file: {name} -> {path_str}")
 
-            # Build concrete actions for this file
-            per_file_items: List[Dict[str, Any]] = []
-            for act in actions:
-                if not isinstance(act, dict) or "label" not in act:
-                    continue
-                label = str(act.get("label", "Action"))
-
-                # Template command (optional)
-                raw_cmd = str(act.get("cmd", "")).format(
-                    PATH=path_str, NAME=name, STEM=stem, KUBECONFIG=path_str, KUBECTL=KUBECTL
-                ).strip()
-
-                # Normalize kubectl invocations to include --kubeconfig right after kubectl
-                cmd = raw_cmd
-                try:
-                    if raw_cmd:
-                        stripped = raw_cmd.lstrip()
-                        if stripped.startswith("kubectl "):
-                            rest = stripped[len("kubectl "):]
-                            cmd = f"{kubectl_q} --kubeconfig={shlex.quote(path_str)} {rest}"
-                        elif stripped.startswith(f"{KUBECTL} ") or stripped.startswith(f"{kubectl_q} "):
-                            if "--kubeconfig" not in stripped:
-                                token = kubectl_q
-                                rest = stripped[len(token)+1:] if stripped.startswith(token+" ") else stripped[len(KUBECTL)+1:]
-                                cmd = f"{kubectl_q} --kubeconfig={shlex.quote(path_str)} {rest}"
-                except Exception:
-                    cmd = raw_cmd
-
-                if not cmd:
-                    # Safe fallback
-                    cmd = f'echo "Selected {name}"'
-
-                logger.debug(f"Action for {name}: {label} -> {cmd}")
-                per_file_items.append({"label": label, "cmd": cmd})
-
-            # If no actions provided, offer a minimal default
-            if not per_file_items:
-                logger.debug(f"No actions for {name}, using defaults")
-                per_file_items = [
-                    {"label": "Pods (all)", "cmd": f'{kubectl_q} --kubeconfig={shlex.quote(path_str)} get pods'},
-                ]
-
-            # Always add a dynamic Pods chooser unless one already exists
-            try:
-                has_dynamic = any(isinstance(it, dict) and it.get("list_cmd") for it in per_file_items)
-            except Exception:
-                has_dynamic = False
-            if not has_dynamic:
-                # List only pod names; avoid namespaces entirely
-                columns = 'NAME:.metadata.name'
-                pods_list_cmd = f"{kubectl_q} --kubeconfig={shlex.quote(path_str)} get pods --no-headers -o custom-columns={columns}"
-                per_file_items.append({
-                    "label": "Pods (choose)",
-                    "list_cmd": pods_list_cmd,
-                    "entry_label": "{T0}",
-                    "actions": [
-                        {"label": "Describe", "cmd": f"{kubectl_q} --kubeconfig={shlex.quote(path_str)} describe pod {{T0}}"},
-                        {"label": "Logs (-f)", "cmd": f"{kubectl_q} --kubeconfig={shlex.quote(path_str)} logs -f {{T0}}"},
-                        {"label": "Logs (tail 100)", "cmd": f"{kubectl_q} --kubeconfig={shlex.quote(path_str)} logs --tail=100 {{T0}}"},
-                        {"label": "Exec bash", "cmd": f"interactive: {kubectl_q} --kubeconfig={shlex.quote(path_str)} exec -it {{T0}} -- bash"},
-                        {"label": "Exec sh",   "cmd": f"interactive: {kubectl_q} --kubeconfig={shlex.quote(path_str)} exec -it {{T0}} -- /bin/sh"},
-                    ],
-                })
+            # Build concrete actions for this kubeconfig via provider
+            per_file_items = build_items_for_kubeconfig(path_str, kubectl_q, actions)
 
             choices.append({
                 "label": stem,
@@ -635,6 +574,14 @@ class OpsDesk(App):
     # Run a command and stream output to the right panel
     def run_command(self, cmd: str) -> None:
         logger.info(f"Running command: {cmd}")
+        # Handle template-prefixed "commands" that should populate the input
+        TEMPLATE_PREFIX = "template:"
+        if cmd.strip().startswith(TEMPLATE_PREFIX):
+            value = cmd.strip()[len(TEMPLATE_PREFIX):].strip()
+            if self.cmd_input:
+                self.cmd_input.value = value
+                self.cmd_input.focus()
+            return
         # Handle interactive-prefixed commands by suspending the TUI
         INTERACTIVE_PREFIX = "interactive:"
         if cmd.strip().startswith(INTERACTIVE_PREFIX):
