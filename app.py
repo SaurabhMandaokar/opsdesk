@@ -483,13 +483,17 @@ class OpsDesk(App):
     .tab-title { padding: 0 1; text-style: bold; border-bottom: solid $panel; }
     Button { margin: 0 1; }
     #left Button { margin: 0 1; padding: 0 1; content-align: left middle; width: 100%; min-height: 1; }
-    .header-actions Button { width: auto; min-width: 10; padding: 0 1; }
+    /* Make Back/Kill stay on the same row and visible */
+    #left Button.header-btn { width: auto; min-width: 10; }
+    .header-actions { padding: 0 1; }
     .header-actions { padding: 0 1; }
     #out { border: solid $panel; height: 1fr; min-height: 8; }
     #cmd_row { layout: horizontal; padding: 0 1; }
     #cmd_input { border: solid $panel; width: 1fr; }
     #history_title { padding: 0 1; text-style: italic; color: $text-muted; }
     #history { border: solid $panel; height: 16; min-height: 8; }
+    #history Button { margin: 0 1; }
+    .hist-row { padding: 0 0; }
     """
 
     BINDINGS = [
@@ -499,6 +503,7 @@ class OpsDesk(App):
         ("ctrl+p", "history_prev", "Prev Cmd"),
         ("ctrl+n", "history_next", "Next Cmd"),
         ("ctrl+v", "paste_cmd", "Paste"),
+        ("ctrl+k", "kill_proc", "Kill Running"),
     ]
 
     def __init__(self) -> None:
@@ -537,6 +542,7 @@ class OpsDesk(App):
                     yield self.cmd_input
                     yield Button("📋 Copy", id="copy-input")
                     yield Button("📥 Paste", id="paste-input")
+                    yield Button("⛔ Kill", id="kill-proc")
                 yield Static("History (click to re-run)", id="history_title")
                 self.history = ScrollableContainer(id="history")
                 yield self.history
@@ -670,7 +676,7 @@ class OpsDesk(App):
         # Show newest first as rows with explicit intent in tooltip
         for cmd in reversed(self._history):
             label = cmd if len(cmd) <= 80 else cmd[:77] + "..."
-            row = Horizontal()
+            row = Horizontal(classes="hist-row")
             self.history.mount(row)
             row.mount(Button(f"↻ {label}", tooltip=f"run:{cmd}"))
             row.mount(Button("📋", tooltip=f"copy:{cmd}"))
@@ -738,6 +744,10 @@ class OpsDesk(App):
                 self._copy_to_clipboard(self.cmd_input.value)
             return
 
+        if event.button.id == "kill-proc":
+            self.kill_running_command()
+            return
+
         # History row buttons
         parent = event.button.parent
         parent_id = getattr(parent, "id", None)
@@ -782,6 +792,9 @@ class OpsDesk(App):
             pass
         for ln in lines:
             self._log_line(ln)
+
+    def action_kill_proc(self) -> None:
+        self.kill_running_command()
 
     def _copy_to_clipboard(self, text: str) -> None:
         try:
@@ -847,6 +860,24 @@ class OpsDesk(App):
                         pass
                 self._was_killed = True
                 self._log_line("[cleaned up child process]")
+        except Exception:
+            pass
+        # Flush and clear UI logs and history on quit
+        try:
+            if self.out and hasattr(self.out, "clear"):
+                self.out.clear()
+        except Exception:
+            pass
+        try:
+            self._history.clear()
+            if self.history:
+                for child in list(self.history.children):
+                    child.remove()
+        except Exception:
+            pass
+        try:
+            import logging as _logging
+            _logging.shutdown()
         except Exception:
             pass
         self.exit()

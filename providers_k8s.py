@@ -69,6 +69,9 @@ def build_items_for_kubeconfig(
                     {"label": "Describe", "cmd": f"{kubectl_q} --kubeconfig={shlex.quote(kubeconfig_path)} describe pod {{T0}}"},
                     {"label": "Logs (-f)", "cmd": f"{kubectl_q} --kubeconfig={shlex.quote(kubeconfig_path)} logs -f {{T0}}"},
                     {"label": "Logs (tail 100)", "cmd": f"{kubectl_q} --kubeconfig={shlex.quote(kubeconfig_path)} logs --tail=100 {{T0}}"},
+                    {"label": "Generate delete (to input)", "cmd": f"template: {kubectl_q} --kubeconfig={shlex.quote(kubeconfig_path)} delete pod {{T0}}"},
+                    {"label": "Port-forward 4040 (Spark UI)", "cmd": f"( (sleep 1; (command -v open >/dev/null && open http://localhost:4040 || (command -v xdg-open >/dev/null && xdg-open http://localhost:4040) || python3 -m webbrowser http://localhost:4040) >/dev/null 2>&1) & ); {kubectl_q} --kubeconfig={shlex.quote(kubeconfig_path)} port-forward {{T0}} 4040:4040"},
+                    {"label": "Stop port-forward 4040", "cmd": "pids=$(pgrep -f 'kubectl.*port-forward.* {{T0}} .*4040:4040' || true); if [ -n \"$pids\" ]; then kill $pids; fi; pids2=$(lsof -ti tcp:4040 2>/dev/null || true); if [ -n \"$pids2\" ]; then kill $pids2; fi; echo 'Stopped port-forward on 4040'"},
                     {"label": "Run in pod…", "cmd": f"template: {kubectl_q} --kubeconfig={shlex.quote(kubeconfig_path)} exec -i {{T0}} -- /bin/sh -lc 'YOUR_CMD_HERE'"},
                     {"label": "Exec bash", "cmd": f"interactive: {kubectl_q} --kubeconfig={shlex.quote(kubeconfig_path)} exec -it {{T0}} -- bash"},
                     {"label": "Exec sh",   "cmd": f"interactive: {kubectl_q} --kubeconfig={shlex.quote(kubeconfig_path)} exec -it {{T0}} -- /bin/sh"},
@@ -77,4 +80,3 @@ def build_items_for_kubeconfig(
         )
 
     return items
-
