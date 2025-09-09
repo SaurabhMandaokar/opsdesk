@@ -660,11 +660,10 @@ class OpsDesk(App):
     def _history_push(self, cmd: str) -> None:
         if not cmd:
             return
-        if self._history and self._history[-1] == cmd:
-            return
-        self._history.append(cmd)
-        # Reset navigation when a new command is added
-        self._hist_idx = None
+        # Keep only the latest command in history
+        self._history = [cmd]
+        # Point index at the single latest item
+        self._hist_idx = 0
         self._history_refresh()
 
     def _history_refresh(self) -> None:
